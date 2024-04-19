@@ -6,4 +6,5 @@ url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=
 request = requests.get(url)
 content = request.json()
 
-print(content["articles"])
+for article in content["articles"]:
+    print(article["title"])
